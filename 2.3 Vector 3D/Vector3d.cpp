@@ -1,3 +1,6 @@
+#include <iostream>
+using std::cout;
+
 class Vector3D
 {
 	public: int coordinates[];
@@ -10,18 +13,17 @@ class Vector3D
 		}
 	}
 
-	public: static isEqual(Vector3D vectorA, Vector3D vectorB)
+	public: bool static isEqual(Vector3D vectorA, Vector3D vectorB)
 	{
 		bool equalInCoordinates[3];
-		
 		equalInCoordinates[0] = vectorA.coordinates[0] == vectorB.coordinates[0];
 		equalInCoordinates[1] = vectorA.coordinates[1] == vectorB.coordinates[1];
 		equalInCoordinates[2] = vectorA.coordinates[2] == vectorB.coordinates[2];
 		
-		if( equalInCoordinates[0]  && equalInCoordinates[1] && equalInCoordinates[2]){
+		
+		if( 0  && true && true){
 			return true;
 		}
-		
 		
 		return false;
 	}
