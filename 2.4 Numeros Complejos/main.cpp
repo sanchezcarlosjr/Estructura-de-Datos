@@ -1,59 +1,32 @@
 #include <iostream>
-#include <string>
-#include <sstream>
 
-using std::string;
-
-class ComplexNumber
-{
-	private: double real, imaginary;
-	
-	public: ComplexNumber(double real, double imaginary)
-	{
-		this->real = real;
-		this->imaginary = imaginary;
-	}
-	
-	public: string show()
-	{	 
-		string real = static_cast<std::ostringstream*>(&(std::ostringstream() << this->real))->str();
-		string imaginary = static_cast<std::ostringstream*>(&(std::ostringstream() << this->imaginary))->str();
-		return real + " + " + imaginary +"i";
-	}
-	
-	public: add(double real, double imaginary)
-	{
-		this->real = this->real + real;
-		this->imaginary = this->imaginary + imaginary;
-	}
-	
-	public: add(ComplexNumber complex)
-	{
-		this->real = this->real + complex.getReal();
-		this->imaginary = this->imaginary + complex.getImaginary();
-	}
-	
-	public: getReal()
-	{
-		return this->real;
-	}
-	
-	public: getImaginary()
-	{
-		return this->imaginary;
-	}
-	
-};
-
-
+#include "ComplexNumber.cpp"
 
 int main(int argc, char** argv) {
-	ComplexNumber complex(1.2,2.7);
-	ComplexNumber complex1(1,2);
+	ComplexNumber complexA(1.2,2.7);
+	ComplexNumber complexB(2,3);
+	ComplexNumber result;
 	
-	complex.add(complex1);
+	std::cout<<"\nSuma de numeros ";
+	result = complexA + complexB;
+	std::cout<<result.show();	
 	
-	std::cout<<complex.show();	
+	std::cout<<"\nResta de numeros ";
+	result = complexA - complexB;
+	std::cout<<result.show();
+	
+	std::cout<<"\nMultiplicacion (real-img) de numeros ";
+	result = complexA * 2;
+	std::cout<<result.show();
+	
+	std::cout<<"\nMultiplicacion (img-img) de numeros ";
+	result = complexA * complexB;
+	std::cout<<result.show();
+	
+	std::cout<<"\nConjugado del num. img ";
+	result = ~complexA;
+	std::cout<<result.show();
+	
 	
 	return 0;
 }
