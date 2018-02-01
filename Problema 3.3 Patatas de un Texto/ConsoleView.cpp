@@ -1,4 +1,5 @@
 #include <iostream>
+#include "TextView.cpp"
 
 using std::string;
 using std::cout;
@@ -15,11 +16,9 @@ class ConsoleView
 	
 	public: start()
 	{
-		enum EscapeCodes { endline = '\n' };
-		cout<<titleApp;
-		cout<<endline;
-		cout<<"HOLA";
-		
+		char endline = '\n';
+		cout<<titleApp<<endline;
+		new TextView;
 	}
 	
 	
