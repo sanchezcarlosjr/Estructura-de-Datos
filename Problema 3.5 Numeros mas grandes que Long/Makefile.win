@@ -1,0 +1,43 @@
+# Project: Problema 3.5 Numeros mas grandes que Long
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o ConsoleView.o ConsoleController.o MoreLongView.o MoreLongController.o MoreLong.o
+LINKOBJ  = main.o ConsoleView.o ConsoleController.o MoreLongView.o MoreLongController.o MoreLong.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Problema 3.5 Numeros mas grandes que Long.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+ConsoleView.o: ConsoleView.cpp
+	$(CPP) -c ConsoleView.cpp -o ConsoleView.o $(CXXFLAGS)
+
+ConsoleController.o: ConsoleController.cpp
+	$(CPP) -c ConsoleController.cpp -o ConsoleController.o $(CXXFLAGS)
+
+MoreLongView.o: MoreLongView.cpp
+	$(CPP) -c MoreLongView.cpp -o MoreLongView.o $(CXXFLAGS)
+
+MoreLongController.o: MoreLongController.cpp
+	$(CPP) -c MoreLongController.cpp -o MoreLongController.o $(CXXFLAGS)
+
+MoreLong.o: MoreLong.cpp
+	$(CPP) -c MoreLong.cpp -o MoreLong.o $(CXXFLAGS)
