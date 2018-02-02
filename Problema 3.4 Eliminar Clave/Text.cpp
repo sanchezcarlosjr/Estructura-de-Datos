@@ -34,7 +34,11 @@ class Text
 	
 	public: string deletePassword()
 	{
-		
+		int position;
+		while ( ( position = text.find(password) ) != string::npos)
+		{
+			text.replace(position, password.size() , " ");
+		}
 		return text;
 	}
 	
