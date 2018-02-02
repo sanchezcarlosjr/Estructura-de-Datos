@@ -1,5 +1,5 @@
 #include <iostream>
-#include "KilogramPotatoes.cpp"
+#include "PotatoesController.cpp"
 
 using std::cout;
 using std::string;
@@ -9,6 +9,7 @@ using std::cin;
 class TextView
 {
 	string text;
+	
 	public: TextView()
 	{
 		char endline = '\n';
@@ -24,9 +25,9 @@ class TextView
 	
 	private: show()
 	{
-		KilogramPotatores potatores;
+		PotatoesController potatoes;
 		cout<<"El total de la suma es: ";
-		cout<<potatores.add(text);
+		cout<<potatoes.add(text);
 	}
 	
 	
