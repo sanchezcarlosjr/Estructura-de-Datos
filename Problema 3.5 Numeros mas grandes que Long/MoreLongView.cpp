@@ -8,6 +8,7 @@ using std::cin;
 class MoreLongView
 {
 	string number1, number2;
+
 	public: input()
 	{
 		
