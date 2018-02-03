@@ -8,8 +8,8 @@ class MoreLongController
 	MoreLong moreLong;
 	public: string add(string number1, string number2)
 	{
-		MoreLong moreLong(number1, number2);
-		string sum = moreLong.add();
+		MoreLong total;
+		string sum = total.addString(number1, number2);
 		return "Total de la suma es: " + sum;
 	}
 };

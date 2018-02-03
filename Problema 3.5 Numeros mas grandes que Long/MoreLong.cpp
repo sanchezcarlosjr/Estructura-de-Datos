@@ -1,20 +1,54 @@
-//Objetivo: sumar como un tipo int, o long por ejemplo 100+100+100 = 300;
 #include <iostream>
+#include <sstream>
+#include <cstdlib>
+
 using std::string;
 
 class MoreLong
 {
-	string number1, number2;
 	
-	public: MoreLong(string number1, string number2)
+	public: string addString(string number1, string number2)
 	{
-		this->number1 = number1;
-		this->number2 = number2;
+		string total;
+		int num1, num2;
+		int totalTemp, temp[3];
+		
+		
+		for(int i=0; i<number1.size(); i++)
+		{
+			num1 = number1[i] - '0';
+			num2 = number2[i] - '0';
+			
+			totalTemp = num1 + num2;
+			if(i == 0)
+			{ 
+				temp[0] = totalTemp / 10;
+				total += toString(temp[0]);
+			}
+			temp[1] = totalTemp-10;
+			num1 = number1[i+1] - '0';
+			num2 = number2[i+1] - '0';
+			totalTemp = num1+num2;
+			temp[2] = totalTemp/10;
+			if(temp[2] < 0)
+			{
+				temp[2] = 0;
+			}
+			if(temp[1] < 0)
+			{
+				temp[1] = 0;
+			}
+			temp[1] = temp[1] + temp[2];
+			total += toString(temp[1]);
+		}
+				
+		return total;
 	}
 	
-	public: string add()
+	
+	public: string toString(int temp)
 	{
-		return "200";
+		return static_cast<std::ostringstream*>(&(std::ostringstream() << temp))->str();
 	}
 	
 };
