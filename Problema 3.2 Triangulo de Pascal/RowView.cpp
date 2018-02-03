@@ -6,12 +6,7 @@ using std::cout;
 class RowView
 {
 	int array[100];
-	int row=0, rows;
-	
-	public: RowView(int rows)
-	{
-		this->rows = rows;
-	}
+	int row=0;
 	
 	public: draw(int pascalTriangleNumbers[])
 	{
@@ -34,7 +29,7 @@ class RowView
 	
 	public: drawSpace()
 	{
-		for(int k=rows; k>row; k--)
+		for(int k=30; k>row; k--)
 		{
 			cout<<" ";	
 		}

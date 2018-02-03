@@ -26,7 +26,7 @@ class PascalTrianguleView
 	
 	private: show()
 	{
-		RowView rowView(rows);
+		RowView rowView;
 		for(int row=1; row<=rows; row++)
 		{	
 			rowView.draw(pascalTriangle.numbers);
