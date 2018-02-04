@@ -1,9 +1,9 @@
 class MagicSquare
 {
-		
 	private: int magicNumbers[121];
 	private: int magicSquare[11][11];
 	private: int limit, squareOrder;
+	private: int x,y;
 	
 	public: MagicSquare(int squareOrder)
 	{
@@ -21,11 +21,9 @@ class MagicSquare
 	public: calculate()
 	{
 		int tempX=0, tempY=0;
-		int x = squareOrder / 2;
-		int y = 0;
-		int limitX = squareOrder - 1;
-		int limitY = squareOrder - 1;
-		
+		x = squareOrder / 2;
+		y = 0;
+			
 		for(int i=1; i<=limit; i++ )
 		{
 			magicSquare[y][x] = i ;
@@ -33,31 +31,45 @@ class MagicSquare
 			tempX = x;
 			tempY = y;
 			
-			x++;
-			if(x > limitX)
-			{
-				x=0;
-			}
+			calculateX();
+			calculateY();
 			
-			y--;
-			if( y<0)
-			{
-				y = limitY;
-			}
-			
-			
-			if(magicSquare[y][x] > 0)
-			{
-				x = tempX;
-				y = tempY + 1;
-			}
-			
+			recalculateIfIsOcupedCoordinate(tempX, tempY);
 				
 		}
 		
 		toArray();
 	}
 	
+	private: calculateX()
+	{
+		int limitX = squareOrder - 1;
+		x++;
+		if(x > limitX)
+		{
+			x=0;
+		}
+	}
+	
+	private: calculateY()
+	{
+		int limitY = squareOrder - 1;
+		y--;
+		if(y < 0)
+		{
+			y=limitY;
+		}
+	}
+	
+	private: recalculateIfIsOcupedCoordinate(int tempX, int tempY)
+	{
+		if(magicSquare[y][x] > 0)
+		{
+			x = tempX;
+			y = tempY + 1;
+		}
+	}
+		
 	public: toArray()
 	{
 		int iterator=0;
@@ -80,6 +92,9 @@ class MagicSquare
 		return magicNumbers[i];
 	}
 	
-	
+	public: int getSize()
+	{
+		return limit;
+	}
 	
 };

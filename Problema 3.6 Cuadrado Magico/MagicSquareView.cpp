@@ -23,10 +23,9 @@ class MagicSquareView
 	public: output()
 	{
 		MagicSquare magicSquare(squareOrder);
-		int amountMagicNumbers = squareOrder * squareOrder;
 		magicSquare.calculate();
 		int row=0;
-		for(int i=0; i<amountMagicNumbers; i++)
+		for(int i=0; i<magicSquare.getSize(); i++)
 		{
 			if( row == squareOrder)
 			{
