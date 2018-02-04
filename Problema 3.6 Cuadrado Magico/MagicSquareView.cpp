@@ -1,4 +1,5 @@
 #include <iostream>
+#include "MagicSquare.cpp"
 #include "EscapesSequences.cpp"
 
 using std::cout;
@@ -11,21 +12,19 @@ class MagicSquareView
 	
 	public: input()
 	{ 	
-		do
+		 do
 		{
 			cout<<LINEBREAK;
 			cout<<"El orden debe ser impar.";
 			cout<<"Ingrese el orden del cuadrado: "; cin>>squareOrder;
 		}while(squareOrder % 2 == 0 );
-		
 	}
-	
 	
 	public: output()
 	{
-		int magicNumbers[9] = {8,1,6,3,5,7,4,9,2};
+		MagicSquare magicSquare(squareOrder);
 		int amountMagicNumbers = squareOrder * squareOrder;
-		
+		magicSquare.calculate();
 		int row=0;
 		for(int i=0; i<amountMagicNumbers; i++)
 		{
@@ -35,9 +34,8 @@ class MagicSquareView
 				cout<<LINEBREAK;
 			}
 			row++;
-			cout<<magicNumbers[i]<<HORIZONTALTAB;
+			cout<<magicSquare[i]<<HORIZONTALTAB;
 		}
-		
 	}
 	
 	
