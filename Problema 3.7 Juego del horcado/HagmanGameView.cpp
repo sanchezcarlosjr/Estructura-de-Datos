@@ -19,8 +19,6 @@ class HagmanGameView
 	
 	public: start()
 	{
-		HagmanGame game;
-		
 		cout<<titleApp;	
 		
 		int modeGame;
@@ -29,29 +27,32 @@ class HagmanGameView
 		cout<<"1. vs otra Persona"<<HORIZONTALTAB;
 		cout<<"2. vs Computadora"<<HORIZONTALTAB;
 		cout<<"Modo:";cin>>modeGame;
-		
-		game.setModeGame(modeGame);
-		
+	
+		HagmanGame game("HOLA");
 		string wordAttempt;
-		int attempts=1;
+		int attempts=10;
 		do
 		{
 			for(int i=0; i<game.hiddenWordSize; i++)
 			{
-				cout<<"_"<<" ";
+				cout<<game.wordMatch[i]<<" ";
 			}
 			cout<<HORIZONTALTAB;
 			cout<<"Intentos:"<<attempts;
 			cout<<LINEBREAK;
 			cout<<"Ingrese su intento:";
 			cin>>wordAttempt;
-			game.setWordAttempt(wordAttempt);
-			attempts++;
-		}while(game.exist());
+			attempts--;
+		}while(game.exist(wordAttempt));
 		
-		
+		cout<<LINEBREAK;
+		cout<<"PALABRA:"<<game.hiddenWord;
+		cout<<LINEBREAK;
+		cout<<"-JUEGO TERMINADO-";
 		
 	}
+	
+	
 	
 	
 };
