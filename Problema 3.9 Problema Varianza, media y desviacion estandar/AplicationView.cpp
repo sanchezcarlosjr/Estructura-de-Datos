@@ -22,9 +22,11 @@ class AplicationView
 	{
 		cout<<titleApp;
 		elementsView.interact();
+		cout<<LINEBREAK;
 		elementsView.interactAverage();
-		elementsView.interactDeviation();
+		cout<<LINEBREAK;
 		elementsView.interactVariance();
+		cout<<LINEBREAK;
 		elementsView.interactStandardDeviation();
 	}
 

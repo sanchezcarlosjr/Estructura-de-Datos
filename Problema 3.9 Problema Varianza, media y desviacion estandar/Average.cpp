@@ -1,7 +1,7 @@
 #include <iostream>
 class Average
 {
-	private: int elements[10], amountElements;
+	private: int elements[16], amountElements;
 	
 	public: Average(int elements[], int amountElements)
 	{
@@ -12,14 +12,14 @@ class Average
 		}
 	}
 	
-	public: calculate()
+	public: float calculate()
 	{
-		int sum =0;
+		int sum=0;
 		for(int element=0; element<amountElements; element++)
 		{
 			sum += this->elements[element]; 
 		}
-		return sum / amountElements;
+		return (float)sum/amountElements;
 	}
 	
 	
