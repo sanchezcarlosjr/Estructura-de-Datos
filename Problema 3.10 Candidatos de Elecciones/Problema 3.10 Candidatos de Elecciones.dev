@@ -1,6 +1,6 @@
 [Project]
-FileName=3.9 Problema Varianza, media y desviacion estandar.dev
-Name=3.9 Problema Varianza, media y desviacion estandar
+FileName=Problema 3.10 Candidatos de Elecciones.dev
+Name=Problema 3.10 Candidatos de Elecciones
 Type=1
 Ver=2
 ObjFiles=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=8
+UnitCount=5
 
 [VersionInfo]
 Major=1
@@ -81,7 +81,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=EscapesSequences.h
+FileName=CandidatesView.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,37 +91,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=ElementsView.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit6]
-FileName=Average.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit7]
-FileName=Variance.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit8]
-FileName=StandardDeviation.cpp
+FileName=EscapesSequences.h
 CompileCpp=1
 Folder=
 Compile=1
