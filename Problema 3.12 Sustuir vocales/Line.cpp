@@ -9,7 +9,7 @@ class Line
 	
 	public: Line()
 	{
-		line = "Hola mundo";
+		line = "HAY UNA FUERZA MAS GRANDE QUE LA ELECTRICIDAD O LA ENERGIA NUCLEAR: LA VOLUNTAD HUMANA";
 	}
 	
 	private: friend ostream& operator << (ostream& stream, Line line)  
