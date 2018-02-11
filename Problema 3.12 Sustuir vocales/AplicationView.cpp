@@ -28,7 +28,5 @@ class AplicationView
 		cout<<line;
 	}
 
-	
-
 };
 
