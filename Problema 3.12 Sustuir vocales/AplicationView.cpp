@@ -18,10 +18,10 @@ class AplicationView
 
 	public: start()
 	{
-		Line line;
+		enum symbols{ VOWELS };
+		Line line("Hola mundo");
 		cout<<titleApp;
-		//line = lineView.interact();
-		//line.replace(VOWELS);
+		line.replace();
 		cout<<line;
 	}
 
