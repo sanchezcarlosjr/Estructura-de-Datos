@@ -1,4 +1,5 @@
 #include <iostream>
+#include "LineView.cpp"
 #include "Line.cpp"
 #include "EscapesSequences.h"
 
@@ -9,7 +10,9 @@ using std::cin;
 class AplicationView
 {
 	Line line;
+	LineView lineView;
 	string titleApp;
+	
 	public: AplicationView()
 	{
 		this->titleApp = "Problema 3.11 Sustituir vocales"; 
@@ -20,13 +23,12 @@ class AplicationView
 	public: start()
 	{
 		cout<<titleApp;
-		line = "CREE ES LA VERDAD";
+		line = lineView.interact();
 		line.replace();
 		cout<<line;
 	}
 
 	
-	
-	
+
 };
 

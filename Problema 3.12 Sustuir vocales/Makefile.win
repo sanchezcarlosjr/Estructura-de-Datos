@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o AplicationController.o AplicationView.o Line.o
-LINKOBJ  = main.o AplicationController.o AplicationView.o Line.o
+OBJ      = main.o AplicationController.o AplicationView.o Line.o LineView.o
+LINKOBJ  = main.o AplicationController.o AplicationView.o Line.o LineView.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -35,3 +35,6 @@ AplicationView.o: AplicationView.cpp
 
 Line.o: Line.cpp
 	$(CPP) -c Line.cpp -o Line.o $(CXXFLAGS)
+
+LineView.o: LineView.cpp
+	$(CPP) -c LineView.cpp -o LineView.o $(CXXFLAGS)
