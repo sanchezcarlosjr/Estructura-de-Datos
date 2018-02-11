@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o AplicationController.o AplicationView.o AnagramView.o
-LINKOBJ  = main.o AplicationController.o AplicationView.o AnagramView.o
+OBJ      = main.o AplicationController.o AplicationView.o AnagramView.o Words.o
+LINKOBJ  = main.o AplicationController.o AplicationView.o AnagramView.o Words.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -35,3 +35,6 @@ AplicationView.o: AplicationView.cpp
 
 AnagramView.o: AnagramView.cpp
 	$(CPP) -c AnagramView.cpp -o AnagramView.o $(CXXFLAGS)
+
+Words.o: Words.cpp
+	$(CPP) -c Words.cpp -o Words.o $(CXXFLAGS)

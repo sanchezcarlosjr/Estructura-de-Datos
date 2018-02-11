@@ -1,6 +1,5 @@
 #include <iostream>
 #include "AnagramView.cpp"
-#include "EscapesSequences.h"
 
 using std::string;
 using std::cout;
