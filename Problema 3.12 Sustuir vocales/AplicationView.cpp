@@ -8,6 +8,7 @@ using std::cin;
 
 class AplicationView
 {
+	Line line;
 	string titleApp;
 	public: AplicationView()
 	{
@@ -18,9 +19,8 @@ class AplicationView
 
 	public: start()
 	{
-		enum symbols{ VOWELS };
-		Line line("Hola mundo");
 		cout<<titleApp;
+		line = "CREE ES LA VERDAD";
 		line.replace();
 		cout<<line;
 	}

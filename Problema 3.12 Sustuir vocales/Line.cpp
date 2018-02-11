@@ -11,11 +11,6 @@ class Line
 	public: string line;
 	public: string charMoreRepeated;
 
-	public: Line(string line)
-	{
-		this->line = "HOLA MUNDO"; 
-	}
-	
 	public: replace()
 	{
 		findCharThatIsMoreRepeated();
@@ -71,5 +66,10 @@ class Line
 	    stream << line.line <<"  "<<"Mas repetido:"<<line.charMoreRepeated;  
 	    return stream;  
 	}  
+
+	public: void operator = (string line)
+	{
+		this->line = line;
+	}
 
 };
