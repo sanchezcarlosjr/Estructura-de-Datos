@@ -1,0 +1,4 @@
+Estudiante|Carlos Sanchez|15
+General|Margarita Torres|50
+Empleado|Adrian Montes|25
+EstudianteEmpleado|Valeria Hernandez|30
