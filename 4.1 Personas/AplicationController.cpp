@@ -1,14 +1,7 @@
-#include "AplicationView.cpp"
+#include "AplicationController.h"
 
-class AplicationController
+AplicationController::AplicationController()
 {
-	AplicationView view;
-	
-	public: AplicationController()
-	{
-		view.start();
-		view.end();
-	}
-	
-	
-};
+	view.start();
+	view.end();
+}

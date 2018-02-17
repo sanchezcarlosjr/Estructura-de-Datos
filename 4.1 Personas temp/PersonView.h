@@ -1,16 +1,20 @@
 #include <iostream>
-#include <vector>
 #include "Person.h"
 
-using namespace std;
+using std::cout;
+using std::string;
 
 #ifndef PERSONVIEW_H
 #define PERSONVIEW_H
 
 class PersonView
 {
+	private: Person* person;
+	
 	public:
+		PersonView();
 		interact(vector<Person> persons);
+	protected:
 };
 
 #endif

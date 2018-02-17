@@ -1,23 +1,17 @@
-#include <iostream>
+#include "PersonView.h"
 #include "EscapesSequences.h"
 
-
-using std::cout;
-using std::string;
-
-#include "PersonView.h"
-
-PersonView::PersonView()
+PersonView::interact(vector<Person> persons)
 {
-}
-
-PersonView::interact(Person persons[])
-{
-	for(int i=0; i<1; i++)
+	cout<<persons[0].getTitle();
+	cout<<LINEBREAK<<LINEBREAK;
+	for(int i=0; i<persons.size(); i++)
 	{
-		cout<<LINEBREAK;
+		cout<<persons[i].getLastName();
+		cout<<",";
 		cout<<persons[i].getName();
-		cout<<HORIZONTALTAB<<"Tiene la edad de:"<<persons[i].getAge();
+		cout<<HORIZONTALTAB;
+		cout<<"Tiene:"<<persons[i].getAge()<<" anyos";
 		cout<<LINEBREAK;
 	}
 }

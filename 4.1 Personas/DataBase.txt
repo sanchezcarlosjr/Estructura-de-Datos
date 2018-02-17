@@ -1,0 +1,7 @@
+Estudiante|Carlos Eduardo|Sanchez Torres|15
+General|Margarita|Torres Figueroa|50
+Empleado|Adrian|Montes Jimenez|25
+EstudianteEmpleado|Valeria|Hernandez|30
+Estudiante|Juan Carlos|Sanchez Juarez|55
+Empleado|Benito|Juarez|50
+General|Felicitas|Hernandez Beltran|30

@@ -1,11 +1,35 @@
 #include "Person.h"
 
-string Person::getAge()
+Person::Person(string title, string name, string lastName, int age)
 {
-	return "50";
+	this->name = name;
+	this->title = title;
+	this->lastName = lastName;
+	this->age = age;
 }
 
 string Person::getName()
 {
-	return "Margarita Torres";
+	return name;
 }
+
+string Person::getTitle()
+{
+	return title;
+}
+
+int Person::getAge()
+{
+	return age;
+}
+
+string Person::getLastName()
+{
+	return lastName;
+}
+
+bool Person:: operator < (Person person)
+{
+    return (lastName < person.getLastName() );
+}
+
