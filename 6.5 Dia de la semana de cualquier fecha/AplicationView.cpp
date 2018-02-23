@@ -21,5 +21,5 @@ AplicationView::start()
 
 AplicationView::end()
 {
-	
+	cout<<exitApp;
 }
