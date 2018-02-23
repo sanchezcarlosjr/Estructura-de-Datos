@@ -1,15 +1,13 @@
 #include <iostream>
-#include <string>
-#include "VectorView.h"
 
-using namespace std;
+using std::cout;
+using std::string;
 
 #ifndef APLICATIONVIEW_H
 #define APLICATIONVIEW_H
 
 class AplicationView
 {
-	private: VectorView vectorView;
 	private: string titleApp, exitApp;
 	public:
 		AplicationView();

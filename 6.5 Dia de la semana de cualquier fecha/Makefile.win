@@ -1,15 +1,15 @@
-# Project: 4. 1 Personas
+# Project: 6.5 Dia de la semana de cualquier fecha
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o AplicationController.o AplicationView.o FilesView.o PersonView.o Person.o File.o File.o
-LINKOBJ  = main.o AplicationController.o AplicationView.o FilesView.o PersonView.o Person.o File.o File.o
+OBJ      = main.o AplicationController.o AplicationView.o
+LINKOBJ  = main.o AplicationController.o AplicationView.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = "4. 1 Personas.exe"
+BIN      = "6.5 Dia de la semana de cualquier fecha.exe"
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -32,18 +32,3 @@ AplicationController.o: AplicationController.cpp
 
 AplicationView.o: AplicationView.cpp
 	$(CPP) -c AplicationView.cpp -o AplicationView.o $(CXXFLAGS)
-
-FilesView.o: FilesView.cpp
-	$(CPP) -c FilesView.cpp -o FilesView.o $(CXXFLAGS)
-
-PersonView.o: PersonView.cpp
-	$(CPP) -c PersonView.cpp -o PersonView.o $(CXXFLAGS)
-
-Person.o: Person.cpp
-	$(CPP) -c Person.cpp -o Person.o $(CXXFLAGS)
-
-File.o: File.cpp
-	$(CPP) -c File.cpp -o File.o $(CXXFLAGS)
-
-File.o: File.cpp
-	$(CPP) -c File.cpp -o File.o $(CXXFLAGS)
