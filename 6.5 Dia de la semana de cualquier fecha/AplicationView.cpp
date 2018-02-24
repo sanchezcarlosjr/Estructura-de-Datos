@@ -17,9 +17,11 @@ AplicationView::AplicationView()
 AplicationView::start()
 {
 	cout<<titleApp;
+	dateView.interact();
 }
 
 AplicationView::end()
 {
 	cout<<exitApp;
+	system("pause");
 }
