@@ -2,6 +2,8 @@
 #define MATHEMATICALEXPRESSIONVIEW_H
 
 #include "Aplication.h"
+#include "MathematicalExpression.h"
+
 
 class MathematicalExpressionView : public Aplication
 {	
@@ -9,7 +11,7 @@ class MathematicalExpressionView : public Aplication
 
 	public:
 		interact();
-		getIsCorrect();
+		string isCorrectView();
 };
 
 #endif

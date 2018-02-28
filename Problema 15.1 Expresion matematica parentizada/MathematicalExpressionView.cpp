@@ -3,11 +3,11 @@
 
 MathematicalExpressionView::interact()
 {
-	expresion = new MathematicalExpression("1+1");
-	cout<<getIsCorrect();
+	expression = new MathematicalExpression("1+1");
+	cout<<isCorrectView();
 }
 
-MathematicalExpressionView::getIsCorrect()
+string MathematicalExpressionView::isCorrectView()
 {
 	return (expression->isCorrect()) ? "Perfecto" : "Imperfecto";
 }
