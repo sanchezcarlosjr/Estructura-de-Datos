@@ -3,7 +3,9 @@
 
 MathematicalExpressionView::interact()
 {
-	expression = new MathematicalExpression("1+1");
+	string temp;
+	cout<<"Expresion:";cin>>temp;
+	expression = new MathematicalExpression(temp);
 	cout<<isCorrectView();
 }
 
