@@ -23,6 +23,11 @@ bool MathematicalExpression::isCorrect()
 		}
 	}
 	
+	if(temp.size()-1 == 0)
+	{
+		return false;
+	}
+	
 	for(int i=0; i<temp.size();i++)
 	{
 		if(temp[i] == false)
@@ -33,17 +38,17 @@ bool MathematicalExpression::isCorrect()
 	
 	return true;
 }
+
 bool MathematicalExpression::xxx(char temp)
 {
-	bool result;
 	if(groupingSymbols.empty())
 	{
-		result = false;
+		return false;
 	}
 	else
 	{
-		(temp == groupingSymbols.top()) ? result = true : result = false;
+		char top = groupingSymbols.top();
 		groupingSymbols.pop();
+		return (temp == top) ? true : false;
 	}
-	return result;
 }
