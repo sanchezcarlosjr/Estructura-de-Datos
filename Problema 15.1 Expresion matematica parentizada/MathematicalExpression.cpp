@@ -7,7 +7,6 @@ MathematicalExpression::MathematicalExpression(string expression)
 
 bool MathematicalExpression::isCorrect()
 {	
-	
 	vector<bool> temp;
 	for(int i=0; i<expression.size(); i++)
 	{
@@ -15,16 +14,13 @@ bool MathematicalExpression::isCorrect()
 		{
 			case '(':  groupingSymbols.push(')'); break;
 			case ')':  temp.push_back(xxx(')')); break;
+			
 			case '{':  groupingSymbols.push('}'); break;
 			case '}':  temp.push_back(xxx('}')); break;
+			
 			case '[':  groupingSymbols.push(']'); break;
 			case ']':  temp.push_back(xxx(']')); break;
 		}
-	}
-	
-	if(temp.size() == 0)
-	{
-		return false;
 	}
 	
 	for(int i=0; i<temp.size();i++)
@@ -39,22 +35,15 @@ bool MathematicalExpression::isCorrect()
 }
 bool MathematicalExpression::xxx(char temp)
 {
+	bool result;
 	if(groupingSymbols.empty())
 	{
-		return false;
+		result = false;
 	}
 	else
 	{
-		if( temp != groupingSymbols.top()   )
-		{
-			return false;
-		}
-		else
-		{
-			return true;
-		}
+		(temp == groupingSymbols.top()) ? result = true : result = false;
 		groupingSymbols.pop();
 	}
+	return result;
 }
-
-
