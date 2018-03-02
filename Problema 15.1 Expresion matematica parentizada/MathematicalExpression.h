@@ -10,6 +10,7 @@ using namespace std;
 class MathematicalExpression
 {
 	private: string expression;
+	private: vector<bool> searchResults;
 	private: stack<char> groupingSymbols;
 	
 	public:
@@ -17,7 +18,8 @@ class MathematicalExpression
 		bool isCorrect();
 		
 	private:
-		bool xxx(char temp); 
+		findGroupingSymbols();
+		bool find(char temp); 
 };
 
 #endif

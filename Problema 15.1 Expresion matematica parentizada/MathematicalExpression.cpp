@@ -7,39 +7,41 @@ MathematicalExpression::MathematicalExpression(string expression)
 
 bool MathematicalExpression::isCorrect()
 {	
-	vector<bool> temp;
+	findGroupingSymbols();
+	if(searchResults.size()-1 == 0)
+	{
+		return false;
+	}
+	for(int i=0; i<searchResults.size();i++)
+	{
+		if(searchResults[i] == false)
+		{
+			return false;
+		}
+	}	
+	return true;
+}
+
+MathematicalExpression::findGroupingSymbols()
+{
+	enum {PARETHESIS = '(', BRACES='{', SQUAREBRAKETS ='['};
+	enum {INVERSEPARETHESIS = ')', INVERSEBRACES='}', INVERSESQUAREBRAKETS=']'};
 	for(int i=0; i<expression.size(); i++)
 	{
 		switch(expression[i])
 		{
-			case '(':  groupingSymbols.push(')'); break;
-			case ')':  temp.push_back(xxx(')')); break;
-			
-			case '{':  groupingSymbols.push('}'); break;
-			case '}':  temp.push_back(xxx('}')); break;
-			
-			case '[':  groupingSymbols.push(']'); break;
-			case ']':  temp.push_back(xxx(']')); break;
+			case PARETHESIS:groupingSymbols.push(INVERSEPARETHESIS); break;
+			case INVERSEPARETHESIS:searchResults.push_back(find(INVERSEPARETHESIS)); break;
+			case BRACES:  groupingSymbols.push(INVERSEBRACES); break;
+			case INVERSEBRACES:  searchResults.push_back(find(INVERSEBRACES)); break;
+			case SQUAREBRAKETS:  groupingSymbols.push(INVERSESQUAREBRAKETS); break;
+			case INVERSESQUAREBRAKETS:  searchResults.push_back(find(INVERSESQUAREBRAKETS)); break;
 		}
 	}
-	
-	if(temp.size()-1 == 0)
-	{
-		return false;
-	}
-	
-	for(int i=0; i<temp.size();i++)
-	{
-		if(temp[i] == false)
-		{
-			return false;
-		}
-	}
-	
-	return true;
 }
 
-bool MathematicalExpression::xxx(char temp)
+
+bool MathematicalExpression::find(char temp)
 {
 	if(groupingSymbols.empty())
 	{
