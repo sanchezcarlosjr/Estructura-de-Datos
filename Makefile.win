@@ -1,0 +1,46 @@
+# Project: 10.1 Lista doblemente enlazada
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o AplicationController.o Aplication.o AplicationView.o ListView.o List.o Node.o
+LINKOBJ  = main.o AplicationController.o Aplication.o AplicationView.o ListView.o List.o Node.o
+LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
+INCS     = -I"C:/Program Files/Dev-Cpp/MinGW64/include" -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW64/include" -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "10.1 Lista doblemente enlazada.exe"
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+AplicationController.o: AplicationController.cpp
+	$(CPP) -c AplicationController.cpp -o AplicationController.o $(CXXFLAGS)
+
+Aplication.o: Aplication.cpp
+	$(CPP) -c Aplication.cpp -o Aplication.o $(CXXFLAGS)
+
+AplicationView.o: AplicationView.cpp
+	$(CPP) -c AplicationView.cpp -o AplicationView.o $(CXXFLAGS)
+
+ListView.o: ListView.cpp
+	$(CPP) -c ListView.cpp -o ListView.o $(CXXFLAGS)
+
+List.o: List.cpp
+	$(CPP) -c List.cpp -o List.o $(CXXFLAGS)
+
+Node.o: Node.cpp
+	$(CPP) -c Node.cpp -o Node.o $(CXXFLAGS)
